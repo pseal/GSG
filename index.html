@@ -18,12 +18,15 @@
   <a href="#" class="logo">
     <span>GET</span><em>—</em><span>SET</span><em>—</em><span>GO</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="#destinations">Destinations</a></li>
-    <li><a href="#deals">Deals</a></li>
-    <li><a href="#history-section">Discover</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#" class="nav-cta">Plan My Trip</a></li>
+  <button class="ham-btn" id="hamBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#destinations" onclick="closeNav()">Destinations</a></li>
+    <li><a href="#deals" onclick="closeNav()">Deals</a></li>
+    <li><a href="#history-section" onclick="closeNav()">Discover</a></li>
+    <li><a href="#about" onclick="closeNav()">About</a></li>
+    <li><a href="#" class="nav-cta" onclick="closeNav()">Plan My Trip</a></li>
   </ul>
 </nav>
 
