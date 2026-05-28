@@ -1233,3 +1233,52 @@
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
   footer { padding: 4rem 2rem 2rem; }
 }
+
+/* ── SCROLL TO TOP BUTTON ── */
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 46px;
+  height: 46px;
+  background: var(--gold);
+  color: var(--dark);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s, background 0.2s;
+  pointer-events: none;
+  box-shadow: 0 4px 20px rgba(201,168,76,0.35);
+}
+.scroll-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+.scroll-top:hover {
+  background: var(--gold-light);
+  transform: translateY(-3px);
+}
+.scroll-top svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--dark);
+  stroke-width: 2.5;
+  fill: none;
+}
+
+@media (max-width: 768px) {
+  .scroll-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 40px;
+    height: 40px;
+  }
+  .scroll-top svg { width: 17px; height: 17px; }
+}
