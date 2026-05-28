@@ -1,3 +1,24 @@
+// ── HAMBURGER MENU ──
+const hamBtn = document.getElementById('hamBtn');
+const navLinks = document.getElementById('navLinks');
+
+hamBtn.addEventListener('click', () => {
+  hamBtn.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+
+function closeNav() {
+  hamBtn.classList.remove('open');
+  navLinks.classList.remove('open');
+}
+
+// Close nav when clicking outside
+document.addEventListener('click', e => {
+  if (!hamBtn.contains(e.target) && !navLinks.contains(e.target)) {
+    closeNav();
+  }
+});
+
 // Custom cursor
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursorRing');
