@@ -12,6 +12,21 @@ function closeNav() {
   navLinks.classList.remove('open');
 }
 
+// ── SCROLL TO TOP ──
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 // Close nav when clicking outside
 document.addEventListener('click', e => {
   if (!hamBtn.contains(e.target) && !navLinks.contains(e.target)) {
