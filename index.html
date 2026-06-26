@@ -6,37 +6,6 @@
 <title>GET-SET-GO — The World Awaits</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="travel.css">
-<style>
-  /* ── FOOTER GRID FIX ── */
-  .footer-grid {
-    display: grid !important;
-    grid-template-columns: 2fr 1fr 1fr 1fr !important;
-    gap: 2rem !important;
-    margin-bottom: 4rem;
-  }
-  @media (max-width: 1100px) {
-    .footer-grid {
-      grid-template-columns: 1fr 1fr !important;
-    }
-  }
-  @media (max-width: 600px) {
-    .footer-grid {
-      grid-template-columns: 1fr !important;
-    }
-  }
-
-  /* ── STOP OVERFLOW CLIPPING FOOTER ── */
-  footer {
-    overflow: visible !important;
-  }
-  body > * {
-    max-width: none !important;
-    overflow-x: visible !important;
-  }
-  body {
-    overflow-x: hidden !important;
-  }
-</style>
 </head>
 <body>
 
@@ -49,15 +18,12 @@
   <a href="#" class="logo">
     <span>GET</span><em>—</em><span>SET</span><em>—</em><span>GO</span>
   </a>
-  <button class="ham-btn" id="hamBtn" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#destinations" onclick="closeNav()">Destinations</a></li>
-    <li><a href="#deals" onclick="closeNav()">Deals</a></li>
-    <li><a href="#history-section" onclick="closeNav()">Discover</a></li>
-    <li><a href="#about" onclick="closeNav()">About</a></li>
-    <li><a href="#" class="nav-cta" onclick="closeNav()">Plan My Trip</a></li>
+  <ul class="nav-links">
+    <li><a href="#destinations">Destinations</a></li>
+    <li><a href="#deals">Deals</a></li>
+    <li><a href="#history-section">Discover</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#" class="nav-cta">Plan My Trip</a></li>
   </ul>
 </nav>
 
@@ -637,21 +603,22 @@
     <div class="footer-col">
       <h4>Discover</h4>
       <ul>
-        <li><a href="#">Hot Deals</a></li>
-        <li><a href="#">Top Destinations</a></li>
-        <li><a href="#">Destination History</a></li>
-        <li><a href="#">Travel Guides</a></li>
-        <li><a href="#">Airline Reviews</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Discover</h4>
-      <ul>
         <li><a href="#deals">Hot Deals</a></li>
         <li><a href="#destinations">Top Destinations</a></li>
         <li><a href="#history-section">Destination History</a></li>
         <li><a href="#deals">Travel Guides</a></li>
         <li><a href="#deals">Airline Reviews</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -673,12 +640,6 @@
   </div>
 </div>
 
-<button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
-  <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="18 15 12 9 6 15"/>
-  </svg>
-</button>
-  
 <script src="travel.js"></script>
 </body>
 </html>
