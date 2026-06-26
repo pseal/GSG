@@ -50,6 +50,19 @@ function animRing() {
 }
 animRing();
 
+// ── SMOOTH ANCHOR SCROLLING (fixes overflow-x: hidden breaking native scroll) ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const hash = a.getAttribute('href');
+    if (!hash || hash === '#') { e.preventDefault(); return; }
+    const target = document.querySelector(hash);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
 // ── AIRPORT / CITY DATABASE ──
 const airports = [
   { code:'LHR', city:'London', country:'United Kingdom', flag:'🇬🇧', name:'Heathrow Airport' },
